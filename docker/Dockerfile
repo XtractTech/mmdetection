@@ -8,6 +8,11 @@ RUN apt-get update && apt-get install -y libglib2.0-0 libsm6 libxrender-dev libx
 
 # Install mmdetection
 RUN conda install cython -y
-RUN git clone https://github.com/open-mmlab/mmdetection.git /mmdetection
+COPY . /mmdetection
 WORKDIR /mmdetection
 RUN pip install -e .
+
+# Install jupyter lab
+RUN pip install jupyterlab
+
+EXPOSE 8888

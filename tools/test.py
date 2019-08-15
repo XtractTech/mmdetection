@@ -129,8 +129,7 @@ def parse_args():
     return args
 
 
-def main():
-    args = parse_args()
+def main(args):
 
     assert args.out or args.show or args.json_out, \
         ('Please specify at least one operation (save or show the results) '
@@ -221,4 +220,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(parse_args())
