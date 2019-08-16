@@ -10,10 +10,11 @@ from .utils import random_scale, show_ann, to_tensor
 from .voc import VOCDataset
 from .wider_face import WIDERFaceDataset
 from .xml_style import XMLDataset
+from .oi_subset import OISubset
 
 __all__ = [
     'CustomDataset', 'XMLDataset', 'CocoDataset', 'VOCDataset',
-    'CityscapesDataset', 'GroupSampler', 'DistributedGroupSampler',
+    'CityscapesDataset', 'OISubset', 'GroupSampler', 'DistributedGroupSampler',
     'build_dataloader', 'to_tensor', 'random_scale', 'show_ann',
     'ConcatDataset', 'RepeatDataset', 'ExtraAugmentation', 'WIDERFaceDataset',
     'DATASETS', 'build_dataset'
